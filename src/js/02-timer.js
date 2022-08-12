@@ -56,6 +56,7 @@ const options = {
 refs.btnStart.addEventListener('click', () => {
   timer.start();
 });
+
 flatpickr('#datetime-picker', options);
 
 function updateClock({ days, hours, minutes, seconds }) {
