@@ -11,6 +11,10 @@ const refs = {
   spanSecondsEl: document.querySelector('[data-seconds]'),
 };
 
+refs.btnStart.addEventListener('click', () => {
+  timer.start();
+});
+
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -53,9 +57,6 @@ const options = {
     }
   },
 };
-refs.btnStart.addEventListener('click', () => {
-  timer.start();
-});
 
 flatpickr('#datetime-picker', options);
 
