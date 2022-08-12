@@ -11,10 +11,6 @@ const refs = {
   spanSecondsEl: document.querySelector('[data-seconds]'),
 };
 
-refs.btnStart.addEventListener('click', () => {
-  timer.start();
-});
-
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -34,7 +30,7 @@ const options = {
       }
       let deltaTime = deadline - startTime;
 
-      timer = {
+      const timer = {
         IntervalId: null,
         start() {
           if (this.IntervalId) {
@@ -54,6 +50,9 @@ const options = {
           }, 1000);
         },
       };
+      refs.btnStart.addEventListener('click', () => {
+        timer.start();
+      });
     }
   },
 };
